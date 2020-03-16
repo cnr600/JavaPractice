@@ -28,4 +28,35 @@ public class FindPivotIndexTests {
 	    int[] num= new int[] {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,19};
 		assertEquals(20,fPI.pivotIndex(num));
 	}
+	
+	@Test
+	void pivotIndex5() {
+		int[] num = new int [] {-1,-1,-1,0,1,1};
+		assertEquals(0, fPI.pivotIndex(num));
+	}
+	@Test
+	void pivotIndex6() {
+		int[] num = new int [] {-1};
+		assertEquals(0, fPI.pivotIndex(num));
+	}
+	@Test
+	void pivotIndex7() {
+		int[] num = new int [] {-1,0};
+		assertEquals(0, fPI.pivotIndex(num));
+	}
+	@Test
+	void pivotIndex8() {
+		int[] num = new int [] {-1,-2};
+		assertEquals(-1, fPI.pivotIndex(num));
+	}
+	@Test
+	void pivotIndex9() {
+		int[] num = new int [] {-1,-1,0,1,1,0};
+		assertEquals(5, fPI.pivotIndex(num));
+	}
+	@Test
+	void pivotIndex10() {
+		int[] num = new int [] {};
+		assertEquals(-1, fPI.pivotIndex(num));
+	}
 }
