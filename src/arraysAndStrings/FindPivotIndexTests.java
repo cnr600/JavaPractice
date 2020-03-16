@@ -23,4 +23,9 @@ public class FindPivotIndexTests {
 	    int[] num= new int[] {1,2};
 		assertEquals(-1,fPI.pivotIndex(num));
 	}
+	@Test
+	void pivotIndex4() {
+	    int[] num= new int[] {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,19};
+		assertEquals(20,fPI.pivotIndex(num));
+	}
 }
